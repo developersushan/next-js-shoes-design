@@ -25,3 +25,45 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.logo{
+  animation: logo ease-in 2s infinite;
+  font-size: 40px;
+
+}
+@keyframes logo{
+  0%{
+    background: -webkit-linear-gradient( rgb(188, 12, 241),rgb(51, 206, 4),rgb(187, 11, 231), rgb(9, 207, 233));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  25%{
+    background: -webkit-linear-gradient( rgb(241, 39, 12),rgb(4, 206, 196),rgb(212, 216, 6), rgb(21, 221, 3));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  50%{
+    background: -webkit-linear-gradient( rgb(6, 44, 214),rgb(206, 85, 4),rgb(187, 11, 231), rgb(17, 199, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  75%{
+    background: -webkit-linear-gradient( rgb(188, 12, 241),rgb(206, 85, 4),rgb(240, 4, 102), rgb(233, 229, 3));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100%{
+    background: -webkit-linear-gradient( rgb(188, 12, 241),rgb(206, 85, 4),rgb(187, 11, 231), rgb(9, 207, 233));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+.btn{
+  width: 200px;
+  box-shadow: inset -200px 0 0 0 rgb(255, 72, 0);
+  transition: all ease-in-out 0.5s;
+}
+.btn:hover{
+  width: 200px;
+  box-shadow: inset 200px 0 0 0 rgb(236, 3, 159);
+}
