@@ -10,7 +10,7 @@ export default async function getUserInfo({ params: { id } }) {
             <div className="product w-[1000px] mx-auto  items-center mt-10 rounded-md bg-white text-black p-10">
                 <img className="rounded" width={400} height={400} src={thumbnail} alt="" />
                 <h2 className="text-2xl">Title:{title}</h2>
-                <p>Description {description}</p>
+                <p>Description: {description}</p>
                 <p>Category:{category}</p>
                 <p className="text-orange-500">Price:${price}</p>
                 <p><strong>Brand:{brand}</strong></p>

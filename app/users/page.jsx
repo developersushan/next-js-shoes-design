@@ -7,7 +7,7 @@ export default async function page() {
     const userData = users.products
     // console.log(users.products)
     return (
-        <div className='grid grid-cols-4 gap-10'>
+        <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-10'>
             {
                 userData.map(product => {
                     return (
