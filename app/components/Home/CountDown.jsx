@@ -1,7 +1,12 @@
+"use client"
 import Image from 'next/image'
 import React from 'react'
 import global from '../../../assets/9a8a27ff99bce89686730d3bc42b9bf4.webp'
+import CountUp from 'react-countup'
+import ScrollTrigger from 'react-scroll-trigger'
+import { useState } from 'react'
 export default function CountDown() {
+  const [scrollCount,setScrollCount] = useState(false)
   return (
     <div>
         <div className="main-section relative">
@@ -30,30 +35,28 @@ export default function CountDown() {
 
               <div className="box grid lg:grid-cols-2 md:grid-cols-2 p-5 sm:grid-cols-1 gap-10 ">
             <div className="bg-white/50 backdrop-blur-md text-white py-6 px-8 rounded-md shadow-lg">
-              <h3 className="text-4xl text-gray-700 font-semibold">
+              <h3 className="text-2xl   text-gray-700">
               Millions
               </h3>
-              <p className="">of merchants worldwide</p>
+               <ScrollTrigger onEnter={()=>setScrollCount(true)} onExit={()=>setScrollCount(false)}> {scrollCount && <h3 className="text-4xl font-semibold"><CountUp start={0} end={1000} duration={10} delay={2}/>+k</h3>}</ScrollTrigger>  
             </div>
             <div className="bg-white/50 backdrop-blur-md text-white py-6 px-8 rounded-md shadow-lg">
               <h3 className="text-xl text-gray-600 font-semibold">
                 Destination
               </h3>
-              <p className="text-xl font-semibold">countries represented</p>
+              <ScrollTrigger onEnter={()=>setScrollCount(true)} onExit={()=>setScrollCount(false)}> {scrollCount && <h3 className="text-4xl font-semibold"><CountUp start={0} end={350} duration={5} delay={2}/>+k</h3>}</ScrollTrigger>  
             </div>
             <div className="bg-white/50 backdrop-blur-md text-white py-6 px-8 rounded-md shadow-lg">
               <h3 className="text-lg text-gray-600 font-semibold">
-                Destination
+                Followers
               </h3>
-              <p className="text-2xl font-semibold">New York</p>
+              <ScrollTrigger onEnter={()=>setScrollCount(true)} onExit={()=>setScrollCount(false)}> {scrollCount && <h3 className="text-4xl font-semibold"><CountUp start={0} end={650} duration={5} delay={2}/>+</h3>}</ScrollTrigger>  
             </div>
             <div className="bg-white/50 backdrop-blur-md text-white py-6 px-8 rounded-md shadow-lg">
               <h3 className="text-lg text-gray-600 font-semibold">
                 Pessengers
               </h3>
-              <p className="text-2xl font-semibold">
-                2 adult,3 children,1 pets
-              </p>
+              <ScrollTrigger onEnter={()=>setScrollCount(true)} onExit={()=>setScrollCount(false)}> {scrollCount && <h3 className="text-4xl font-semibold"><CountUp start={0} end={89} duration={15} delay={2}/>More</h3>}</ScrollTrigger>  
             </div>
           </div>
             </div>

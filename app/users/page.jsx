@@ -1,4 +1,4 @@
-"use client"
+
 import getUsers from '../libs/getUsers'
 import Link from 'next/link'
 
